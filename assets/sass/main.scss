@@ -1,0 +1,148 @@
+$color__white: #FFFFFF;
+$color__primary--light: #33ccff;
+$color__secondary--dark: #252746;
+$color__neutral--light: #999999;
+$layout__bg-size: cover;
+//400 and 700
+$text__family-montserrat:  "Montserrat", sans-serif;
+//400
+$text__family-montserrat-alt:  "Montserrat Alternates", sans-serif;
+$layout__max-width: 875px !default;
+$layout__padding: 20px, 20px, 20px, 20px !default;
+$layout__border-width: 10px !default;
+$layout__border-style: solid !default;
+$layout__bg-size: 100% !default;
+$base__font-size : 1.3em;
+
+@function calc-em($target, $context: $base__font-size) {
+  @return ($target / $context) * 1em;
+}
+// Centre a layout
+%layout__block--centered {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#container {
+  @extend %layout__block--centered;
+  width: 200px;
+  height: 200px;
+  max-width: calc-em($layout__max-width);
+}
+html, body {
+  min-height: 100%;
+}
+body {
+    background-size: $layout__bg-size;
+    background-color: #252746;
+    width: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    color: $color__white;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+
+.layout__container {
+  @extend %layout__block--centered;
+  max-width: calc-em($layout__max-width);
+  padding: calc-em(nth($layout__padding, 1)) calc-em(nth($layout__padding, 2)) calc-em(nth($layout__padding, 3)) calc-em(nth($layout__padding, 4));
+  background-color: $color__white;
+  border-top: $layout__border-width $layout__border-style $color__primary--light;
+}
+.coffee {
+  .coffee__title {
+    color: $color__primary--light; 
+    text-align: center;
+    font-family: $text__family-montserrat;
+    font-weight: 700;
+    font-size: 2em;
+    border-bottom: solid 1px $color__neutral--light;
+    text-transform: uppercase;
+  }
+}
+.weather {
+  color: $color__secondary--dark;
+  text-align: center;
+  font-family: $text__family-montserrat;
+  display: flex;
+  .weather__item--val {
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+    border: 1px solid #999;
+    width: 100%;
+    font-size: 1.4em;
+    flex: 1;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .weather__city {
+  }
+  .weather__svg {
+  }
+  .weather__item {
+    cursor: pointer;
+  }
+
+}
+@media only screen and (max-width: 620px){
+  .weather  {
+    width: 97%;
+    flex-direction: column;
+    .weather__item--val  {
+      //border-radius: 0;
+      //width: 40px;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+      height: 80px;
+    border-radius: 0;
+    }
+    .weather__city {
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+    .weather__svg {
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2;
+    }
+    .weather__item {
+      -webkit-order: 3;
+      -ms-flex-order: 3;
+      order: 3;
+    }
+  }
+}
+footer {
+  padding: 30px;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1em;
+  @extend %layout__block--centered;
+  max-width: calc-em($layout__max-width);
+  padding: calc-em(nth($layout__padding, 1)) calc-em(nth($layout__padding, 2)) calc-em(nth($layout__padding, 3)) calc-em(nth($layout__padding, 4));
+  border-top: $layout__border-width $layout__border-style $color__primary--light;
+  background-color: $color__white;
+  color: $color__neutral--light;
+  .footer__link {
+    color: $color__neutral--light;
+  }
+  img  {
+    width: 1em;
+    height: 1em;
+  }
+}

@@ -1,0 +1,47 @@
+/* line 21, ../sass/main.scss */
+#container, .layout__container, footer { margin-left: auto; margin-right: auto; display: block; }
+
+/* line 26, ../sass/main.scss */
+#container { width: 200px; height: 200px; max-width: 673.07692px; }
+
+/* line 32, ../sass/main.scss */
+html, body { min-height: 100%; }
+
+/* line 35, ../sass/main.scss */
+body { background-size: cover; background-color: #252746; width: 100%; z-index: 0; top: 0; left: 0; color: #FFFFFF; }
+/* line 43, ../sass/main.scss */
+body * { box-sizing: border-box; }
+
+/* line 49, ../sass/main.scss */
+.layout__container { max-width: 673.07692px; padding: 15.38462px 15.38462px 15.38462px 15.38462px; background-color: #FFFFFF; border-top: 10px solid #33ccff; }
+
+/* line 57, ../sass/main.scss */
+.coffee .coffee__title { color: #33ccff; text-align: center; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 2em; border-bottom: solid 1px #999999; text-transform: uppercase; }
+
+/* line 67, ../sass/main.scss */
+.weather { color: #252746; text-align: center; font-family: "Montserrat", sans-serif; display: flex; }
+/* line 72, ../sass/main.scss */
+.weather .weather__item--val { display: flex; flex-flow: column; flex-direction: column; justify-content: center; align-items: center; margin-right: 2em; border: 1px solid #999; width: 100%; font-size: 1.4em; flex: 1; border-radius: 50%; height: 180px; width: 180px; }
+/* line 86, ../sass/main.scss */
+.weather .weather__item--val:last-child { margin-right: 0; }
+/* line 94, ../sass/main.scss */
+.weather .weather__item { cursor: pointer; }
+
+@media only screen and (max-width: 620px) { /* line 100, ../sass/main.scss */
+  .weather { width: 97%; flex-direction: column; }
+  /* line 103, ../sass/main.scss */
+  .weather .weather__item--val { justify-content: center; align-items: center; width: 100%; height: 80px; border-radius: 0; }
+  /* line 113, ../sass/main.scss */
+  .weather .weather__city { -webkit-order: 1; -ms-flex-order: 1; order: 1; }
+  /* line 118, ../sass/main.scss */
+  .weather .weather__svg { -webkit-order: 2; -ms-flex-order: 2; order: 2; }
+  /* line 123, ../sass/main.scss */
+  .weather .weather__item { -webkit-order: 3; -ms-flex-order: 3; order: 3; } }
+/* line 130, ../sass/main.scss */
+footer { padding: 30px; text-align: center; line-height: 1.5; font-size: 1em; max-width: 673.07692px; padding: 15.38462px 15.38462px 15.38462px 15.38462px; border-top: 10px solid #33ccff; background-color: #FFFFFF; color: #999999; }
+/* line 141, ../sass/main.scss */
+footer .footer__link { color: #999999; }
+/* line 144, ../sass/main.scss */
+footer img { width: 1em; height: 1em; }
+
+/*# sourceMappingURL=main.css.map */
